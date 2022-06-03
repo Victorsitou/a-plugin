@@ -1,37 +1,7 @@
 import { Select } from "./WPMODULES";
 
-function isSelected_(e) {
-    return true
-}
-
-function serialize_(e) {
-    return null
-}
-
 function onChange_(e) {
-    return null
-}
-
-function j(e) {
-    var t = e.value
-        , n = e.onChange
-        , r = e.serialize
-        , o = void 0 === r ? function (e) {
-            return String(e)
-        }
-            : r;
-    return {
-        select: function (e) {
-            return n(e)
-        },
-        isSelected: function (e) {
-            return e === t
-        },
-        clear: function () {
-            return n(null)
-        },
-        serialize: o
-    }
+    console.log(e);
 }
 
 export function createSelect() {
@@ -49,11 +19,10 @@ export function createSelect() {
         }
     ]
     }*/
-    a = j({ value: "Hello", onChange: onChange_ })
     return Select(
         {
-            options: [{ "value": "Hello", "label": "World" }, { "value": "sad", "label": "asjd" }],
-            a
+            options: [{ "value": "asd", "label": "fgh" }, { "value": "qwe", "label": "erty" }],
+            value: "asd"
         }
     );
 }
