@@ -8,6 +8,32 @@ function serialize_(e) {
     return null
 }
 
+function onChange_(e) {
+    return null
+}
+
+function j(e) {
+    var t = e.value
+        , n = e.onChange
+        , r = e.serialize
+        , o = void 0 === r ? function (e) {
+            return String(e)
+        }
+            : r;
+    return {
+        select: function (e) {
+            return n(e)
+        },
+        isSelected: function (e) {
+            return e === t
+        },
+        clear: function () {
+            return n(null)
+        },
+        serialize: o
+    }
+}
+
 export function createSelect() {
     /*{
     "className": "sort-37NWdz",
@@ -23,5 +49,11 @@ export function createSelect() {
         }
     ]
     }*/
-    return Select({ options: [{ "value": "Hello", "label": "World" }, { "value": "sad", "label": "asjd" }], isSelected: isSelected_, serialize: serialize_ });
+    a = j({ value: "Hello", onChange: onChange_ })
+    return Select(
+        {
+            options: [{ "value": "Hello", "label": "World" }, { "value": "sad", "label": "asjd" }],
+            a
+        }
+    );
 }
