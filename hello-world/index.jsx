@@ -1,4 +1,5 @@
 import { Select } from "./WPMODULES";
+import { createSelect } from "./createSelect";
 
 export default {
     onLoad() {
@@ -9,7 +10,7 @@ export default {
     },
     settings: () => (
         <div>
-            <Select k="test">test</Select>
+            createSelect()
         </div>
     ),
 };
