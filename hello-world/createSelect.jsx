@@ -1,5 +1,9 @@
 import { Select } from "./WPMODULES";
 
+function isSelected_(e) {
+    return true
+}
+
 export function createSelect() {
     /*{
     "className": "sort-37NWdz",
@@ -15,5 +19,5 @@ export function createSelect() {
         }
     ]
     }*/
-    return Select({ options: [{ "value": "Hello", "label": "World" }] });
+    return Select({ options: [{ "value": "Hello", "label": "World" }], isSelected: isSelected_ });
 }
