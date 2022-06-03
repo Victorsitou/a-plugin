@@ -4,6 +4,10 @@ function isSelected_(e) {
     return true
 }
 
+function serialize_(e) {
+    console.log(e)
+}
+
 export function createSelect() {
     /*{
     "className": "sort-37NWdz",
@@ -19,5 +23,5 @@ export function createSelect() {
         }
     ]
     }*/
-    return Select({ options: [{ "value": "Hello", "label": "World" }], isSelected: isSelected_ });
+    return Select({ options: [{ "value": "Hello", "label": "World" }], isSelected: isSelected_, serialize: serialize_ });
 }
