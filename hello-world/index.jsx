@@ -10,7 +10,7 @@ export default {
     },
     settings: () => (
         <div>
-            {createSelect()}
+            {createSelect({})}
         </div>
     ),
 };
