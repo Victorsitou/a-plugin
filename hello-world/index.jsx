@@ -1,4 +1,4 @@
-import { Switch } from "./WPMODULES";
+import { Select } from "./WPMODULES";
 
 export default {
     onLoad() {
