@@ -9,7 +9,7 @@ export default {
     },
     settings: () => (
         <div>
-            <Switch k="test">test</Switch>
+            <Select k="test">test</Select>
         </div>
     ),
 };

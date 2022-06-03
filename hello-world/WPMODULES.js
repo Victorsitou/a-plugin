@@ -1,8 +1,7 @@
 import { batchFind } from "@cumcord/modules/webpack";
 
 export const [
-
-    Switch,
+    Select,
 ] = batchFind(({ findByDisplayName }) => {
-    findByDisplayName("Switch");
+    findByDisplayName("Select");
 });
