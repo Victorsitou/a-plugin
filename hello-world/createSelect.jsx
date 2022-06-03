@@ -5,7 +5,7 @@ function isSelected_(e) {
 }
 
 function serialize_(e) {
-    console.log(e)
+    return null
 }
 
 export function createSelect() {
@@ -23,5 +23,5 @@ export function createSelect() {
         }
     ]
     }*/
-    return Select({ options: [{ "value": "Hello", "label": "World" }], isSelected: isSelected_, serialize: serialize_ });
+    return Select({ options: [{ "value": "Hello", "label": "World" }, { "value": "sad", "label": "asjd" }], isSelected: isSelected_, serialize: serialize_ });
 }
