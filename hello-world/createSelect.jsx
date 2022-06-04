@@ -7,7 +7,7 @@ const { currentUser } = findByProps("getCurrentUser").getCurrentUser;
 function onChange_(e) {
     instead("getAvatarDecorationURL", findByPropsAll("getAvatarDecorationURL")[1], (args) => {
         if (args[0].userId == currentUser().id) {
-            return "https://canary.discord.com/assets/ed315fe1999b1889a94c8473f5d53d5d.svg"
+            return e
         }
         var e = args[0]
         var t = e.userId
