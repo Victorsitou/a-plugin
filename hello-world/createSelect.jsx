@@ -2,11 +2,14 @@ import { Select } from "./WPMODULES";
 import { getAvatarDecorations } from "./avatarDecorations"
 import { instead } from "@cumcord/patcher"
 import { findByPropsAll, findByProps } from "@cumcord/modules/webpack"
+import data from "@cumcord/pluginData";
 
 function onChange_(e) {
+    data.persist.store.avatardeco = e;
     cumcord.patcher.instead("getAvatarDecorationURL", findByPropsAll("getAvatarDecorationURL")[1], (args) => {
         if (parseInt(args[0].userId) == parseInt(findByProps("getCurrentUser").getCurrentUser().id)) {
-            return e;
+            console.log("wooo e: " + data.persist.store.avatardeco)
+            return data.persist.store.avatardeco;
         }
         var e = args[0]
         var t = e.userId
@@ -18,8 +21,8 @@ function onChange_(e) {
             return i
         }
     });
-    console.log(e);
-    return e;
+    console.log(data.persist.store.avatardeco);
+    return data.persist.store.avatardeco;
 }
 
 function createOptions() {
