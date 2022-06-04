@@ -17,7 +17,7 @@ function onChange_(e) {
         var r = e.size;
         if (null != n) {
             var i;
-            i = "https://cdn.discordapp.com/avatar-decorations/" + t + "/" + n + ".png?size=" + r
+            i = "https://cdn.discordapp.com/avatar-decorations/" + t + "/" + n + ".png"
             return i
         }
     });
