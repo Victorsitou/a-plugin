@@ -8,7 +8,6 @@ function onChange_(e) {
     data.persist.store.avatardeco = e;
     cumcord.patcher.instead("getAvatarDecorationURL", findByPropsAll("getAvatarDecorationURL")[1], (args) => {
         if (parseInt(args[0].userId) == parseInt(findByProps("getCurrentUser").getCurrentUser().id)) {
-            console.log("wooo e: " + data.persist.store.avatardeco)
             return data.persist.store.avatardeco;
         }
         var e = args[0]
@@ -21,7 +20,6 @@ function onChange_(e) {
             return i
         }
     });
-    console.log(data.persist.store.avatardeco);
     return data.persist.store.avatardeco;
 }
 
@@ -52,7 +50,7 @@ export function createSelect() {
     return Select.SingleSelect(
         {
             options: createOptions(),
-            value: "asd",
+            value: null,
             onChange: onChange_
         }
     );
