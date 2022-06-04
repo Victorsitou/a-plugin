@@ -7,7 +7,7 @@ function onChange_(e) {
 }
 
 function createOptions() {
-    data = getAvatarDecorations();
+    var data = getAvatarDecorations();
     let options = [];
     data.forEach(function (item) {
         options.push({ value: item.url, label: item.name });
