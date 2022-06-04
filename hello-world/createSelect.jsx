@@ -2,6 +2,7 @@ import { Select } from "./WPMODULES";
 
 function onChange_(e) {
     console.log(e);
+    return e;
 }
 
 export function createSelect() {
