@@ -19,7 +19,7 @@ export function createSelect() {
         }
     ]
     }*/
-    return Select(
+    return Select.SingleSelect(
         {
             options: [{ "value": "asd", "label": "fgh" }, { "value": "qwe", "label": "erty" }],
             value: "asd"
