@@ -5,7 +5,7 @@ import { findByPropsAll, findByProps } from "@cumcord/modules/webpack"
 
 function onChange_(e) {
     cumcord.patcher.instead("getAvatarDecorationURL", findByPropsAll("getAvatarDecorationURL")[1], (args) => {
-        if (args[0].userId == findByProps("getCurrentUser").getCurrentUser().id) {
+        if (parseInt(args[0].userId) == parseInt(findByProps("getCurrentUser").getCurrentUser().id)) {
             return e
         }
         var e = args[0]
